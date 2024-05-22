@@ -24,7 +24,6 @@ public class Shooter : MonoBehaviour
 
             Rigidbody bulletRigidbody = newBullet.gameObject.GetComponent<Rigidbody>();
 
-            bulletRigidbody.useGravity = false;
             bulletRigidbody.velocity = direction * _speed;
 
             yield return new WaitForSeconds(_shootingDelay);
