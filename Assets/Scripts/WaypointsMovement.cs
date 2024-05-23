@@ -31,17 +31,7 @@ public class WaypointsMovement : MonoBehaviour
 
         if (transform.position == currentWaypointPosition)
         {
-            SwitchNextIndex();
-        }
-    }
-
-    private void SwitchNextIndex()
-    {
-        _currentIndex++;
-
-        if (_currentIndex == _waypointsPositions.Length)
-        {
-            _currentIndex = 0;
+            _currentIndex = (_currentIndex++) % _waypointsPositions.Length;
         }
     }
 }
